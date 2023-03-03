@@ -1,6 +1,5 @@
+import 'package:dar/pages/onboarding_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'pages/home_page.dart';
 
 class DarApp extends StatelessWidget {
   const DarApp({super.key});
@@ -8,7 +7,7 @@ class DarApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
+      home: OnboardingScreen(),
     );
   }
 }

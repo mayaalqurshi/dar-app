@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/onboarding_screen.dart';
+import 'pages/clicked_section.dart';
 
 class DarApp extends StatelessWidget {
   const DarApp({super.key});
@@ -13,7 +13,7 @@ class DarApp extends StatelessWidget {
           backgroundColor: Color(0xFFD9D9D9),
         ),
       ),
-      home: const OnboardingScreen(),
+      home: const ClickedSection(),
       debugShowCheckedModeBanner: false,
     );
   }

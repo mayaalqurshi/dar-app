@@ -1,3 +1,4 @@
+import 'package:dar/pages/about_us.dart';
 import 'package:dar/pages/home_page.dart';
 import 'package:dar/pages/other_services_page.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,12 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: const Text('نبذة عننا'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AboutUs(),
+                ),
+              );
             },
           ),
         ],

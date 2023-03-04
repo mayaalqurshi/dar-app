@@ -1,5 +1,5 @@
 import 'package:dar/pages/home_page.dart';
-import 'package:dar/pages/other_services_page.dart';
+import 'package:dar/pages/other_services_pages/other_services_page.dart';
 import 'package:flutter/material.dart';
 
 class DarDrawer extends StatelessWidget {

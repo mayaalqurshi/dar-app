@@ -1,8 +1,8 @@
-import 'package:dar/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/size_config.dart';
 import '../model/onboarding_content.dart';
+import 'home_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -122,7 +122,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: ((context) => const HomePage()),
+                                  builder: ((context) => const HomePage(
+                                        title: '',
+                                      )),
                                 ),
                               );
                             },
@@ -150,7 +152,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: ((context) => const HomePage()),
+                                      builder: ((context) => const HomePage(
+                                            title: '',
+                                          )),
                                     ),
                                   );
                                 },

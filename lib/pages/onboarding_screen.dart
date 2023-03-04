@@ -122,9 +122,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: ((context) => const HomePage(
-                                        title: '',
-                                      )),
+                                  builder: ((context) => const HomePage()),
                                 ),
                               );
                             },
@@ -152,9 +150,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: ((context) => const HomePage(
-                                            title: '',
-                                          )),
+                                      builder: ((context) => const HomePage()),
                                     ),
                                   );
                                 },

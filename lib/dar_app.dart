@@ -6,8 +6,13 @@ class DarApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: OnboardingScreen(),
+    return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.grey,
+        ),
+      ),
+      home: const OnboardingScreen(),
     );
   }
 }

@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import '../components/dar_drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.title});
-  final String title;
+  const HomePage({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Colors.grey,
-      ),
+      appBar: AppBar(),
       body: Center(
         child: Column(
           children: const [
@@ -23,7 +21,7 @@ class HomePage extends StatelessWidget {
       ),
       // Drawer
       endDrawer: const DarDrawer(),
-      backgroundColor: Color.fromARGB(255, 231, 196, 194),
+      backgroundColor: const Color.fromARGB(255, 231, 196, 194),
     );
   }
 }

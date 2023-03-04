@@ -1,6 +1,7 @@
-import 'package:dar/pages/home_page.dart';
-import 'package:dar/pages/other_services_page.dart';
 import 'package:flutter/material.dart';
+
+import '../pages/home_page.dart';
+import '../pages/other_services_page.dart';
 
 class DarDrawer extends StatelessWidget {
   const DarDrawer({
@@ -15,7 +16,7 @@ class DarDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Color(0xFFD9D9D9),
             ),
             child: Text('لوقو'),
           ),

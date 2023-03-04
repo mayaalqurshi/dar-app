@@ -1,3 +1,5 @@
+import 'package:dar/pages/home_page.dart';
+import 'package:dar/pages/other_services_page.dart';
 import 'package:flutter/material.dart';
 
 class DarDrawer extends StatelessWidget {
@@ -20,13 +22,23 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: const Text('الصفحة الرئيسية'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
+                ),
+              );
             },
           ),
           ListTile(
             trailing: const Text('خدمات اخرى'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const OtherServicesPage(),
+                ),
+              );
             },
           ),
           ListTile(

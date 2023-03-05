@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
             ),
             const Text(
               'جميع الأقسام',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(decoration: TextDecoration.underline, fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ],
         ),

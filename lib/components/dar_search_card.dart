@@ -28,6 +28,7 @@ class DarSearchCard extends StatelessWidget {
             height: 40,
             child: const Center(
               child: TextField(
+                textAlign: TextAlign.end,
                 decoration: InputDecoration(
                   hintText: 'ابحث',
                   suffixIcon: Icon(Icons.search),

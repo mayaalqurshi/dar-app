@@ -58,7 +58,7 @@ class SectionPage extends StatelessWidget {
           )
         ],
       ),
-      backgroundColor: const Color.fromARGB(255, 231, 228, 228),
+      backgroundColor: const Color(0xffF4EDED),
     );
   }
 }

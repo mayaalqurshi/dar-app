@@ -1,3 +1,4 @@
+import 'package:dar/components/dar_floating_button.dart';
 import 'package:flutter/material.dart';
 
 class AddTranslator extends StatelessWidget {
@@ -9,6 +10,7 @@ class AddTranslator extends StatelessWidget {
       body: SafeArea(
         child: Text('AddTranslator'),
       ),
+      floatingActionButton: DarFloatingButton(),
     );
   }
 }

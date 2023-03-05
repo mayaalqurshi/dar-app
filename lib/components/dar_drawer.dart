@@ -1,6 +1,7 @@
+import 'package:dar/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
-import '../pages/about_us.dart';
+import '../pages/about_us_page.dart';
 import '../pages/home_page.dart';
 import '../pages/other_services_pages/other_services_page.dart';
 
@@ -46,7 +47,12 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: const Text('اعدادات'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SettingPage(),
+                ),
+              );
             },
           ),
           ListTile(
@@ -55,7 +61,7 @@ class DarDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const AboutUs(),
+                  builder: (context) => const AboutUsPages(),
                 ),
               );
             },

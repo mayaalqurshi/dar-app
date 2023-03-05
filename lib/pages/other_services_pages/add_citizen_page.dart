@@ -6,11 +6,13 @@ class AddCitizens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+      body: const SafeArea(
         child: Text('AddCitizens'),
       ),
-      floatingActionButton: DarFloatingButton(),
+      floatingActionButton: DarFloatingButton(
+        onTap: () {},
+      ),
     );
   }
 }

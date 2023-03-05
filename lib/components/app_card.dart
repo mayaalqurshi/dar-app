@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DarClickedSectionCard extends StatelessWidget {
-  const DarClickedSectionCard({
+class AppCard extends StatelessWidget {
+  const AppCard({
     Key? key,
   }) : super(key: key);
 

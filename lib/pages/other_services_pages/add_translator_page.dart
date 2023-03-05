@@ -6,11 +6,32 @@ class AddTranslator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
-        child: Text('AddTranslator'),
+        child: Column(
+          children: const [
+            Text('AddTranslator'),
+            Text(
+              'الاسم الثلاثي',
+              textAlign: TextAlign.end,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                label: Text(
+                  'الاسم الثلاثي',
+                ),
+                enabledBorder: OutlineInputBorder(),
+              ),
+            ),
+          ],
+        ),
       ),
-      floatingActionButton: DarFloatingButton(),
+      floatingActionButton: DarFloatingButton(
+        onTap: () {},
+      ),
     );
   }
 }

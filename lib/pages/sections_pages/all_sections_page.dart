@@ -1,38 +1,17 @@
-import 'package:dar/components/logo.dart';
+import 'package:dar/components/dar_drawer.dart';
 import 'package:dar/components/title1.dart';
 import 'package:flutter/material.dart';
 
-import '../components/section_card.dart';
+import '../../components/section_card.dart';
 
-class SectionPage extends StatelessWidget {
-  const SectionPage({super.key});
+class AllSectionsPage extends StatelessWidget {
+  const AllSectionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const InkWell(
-          // onTap: () {
-          //   Navigator.pop(context);
-          // },
-          child: Icon(
-            Icons.arrow_back_ios_new_sharp,
-            color: Colors.white,
-          ),
-        ),
-        title: const Center(child: Logo()),
-        actions: const [
-          Center(
-            child: Padding(
-                padding: EdgeInsets.only(right: 12),
-                child: Icon(
-                  Icons.list,
-                  color: Colors.black,
-                )),
-          )
-        ],
-        backgroundColor: Colors.white,
-      ),
+      appBar: AppBar(),
+      endDrawer: const DarDrawer(),
       body: ListView(
         children: [
           Column(

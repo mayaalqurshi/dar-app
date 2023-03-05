@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../components/dar_clicked_section_card.dart';
-import '../components/dar_drawer.dart';
+import '../../components/app_card.dart';
+import '../../components/dar_drawer.dart';
 
-class ClickedSection extends StatelessWidget {
-  const ClickedSection({super.key});
+class SectionPage extends StatelessWidget {
+  const SectionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,18 +23,18 @@ class ClickedSection extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            DarClickedSectionCard(),
+            AppCard(),
             SizedBox(
               height: 20,
             ),
             SizedBox(
               height: 20,
             ),
-            DarClickedSectionCard(),
+            AppCard(),
             SizedBox(
               height: 20,
             ),
-            DarClickedSectionCard(),
+            AppCard(),
           ],
         ),
       ),

@@ -10,6 +10,7 @@ class DarApp extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFD9D9D9),
+          shadowColor: Colors.transparent,
         ),
       ),
       home: const OnboardingScreen(),

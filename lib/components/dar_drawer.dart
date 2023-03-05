@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../pages/about_us.dart';
 import '../pages/home_page.dart';
-import '../pages/other_services_page.dart';
+import '../pages/other_services_pages/other_services_page.dart';
 
 class DarDrawer extends StatelessWidget {
   const DarDrawer({
@@ -51,7 +52,12 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: const Text('نبذة عننا'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AboutUs(),
+                ),
+              );
             },
           ),
         ],

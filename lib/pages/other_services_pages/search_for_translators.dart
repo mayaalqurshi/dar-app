@@ -1,4 +1,5 @@
 import 'package:dar/components/dar_drawer.dart';
+import 'package:dar/components/dar_floating_button.dart';
 import 'package:flutter/material.dart';
 
 class SearchForTranslators extends StatelessWidget {

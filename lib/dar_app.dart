@@ -1,4 +1,4 @@
-import 'package:dar/pages/onboarding_screen.dart';
+import 'package:dar/pages/section_page.dart';
 import 'package:flutter/material.dart';
 
 class DarApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class DarApp extends StatelessWidget {
           backgroundColor: Colors.grey,
         ),
       ),
-      home: const OnboardingScreen(),
+      home: const SectionPage(),
     );
   }
 }

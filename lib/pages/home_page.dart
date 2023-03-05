@@ -1,3 +1,5 @@
+import 'package:dar/components/dar_button.dart';
+import 'package:dar/pages/sections_pages/all_sections_page.dart';
 import 'package:flutter/material.dart';
 
 import '../components/dar_drawer.dart';
@@ -44,43 +46,31 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            Container(
-              height: 60,
-              width: 360,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD9D9D9),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Center(
-                child: Text(
-                  'تطبيقات التوصيل',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+            DarButton(
+              textButton: 'تطبيقات التوصيل',
+              onTap: () {},
             ),
             const SizedBox(
               height: 12,
             ),
-            Container(
-              height: 60,
-              width: 360,
-              decoration: BoxDecoration(
-                color: const Color(0xFFD9D9D9),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Center(
-                child: Text(
-                  'تطبيقات المواصلات',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+            DarButton(
+              textButton: 'تطبيقات المواصلات',
+              onTap: () {},
             ),
             const SizedBox(
               height: 12,
             ),
-            const Text(
-              'جميع الأقسام',
-              style: TextStyle(decoration: TextDecoration.underline, fontSize: 20, fontWeight: FontWeight.bold),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AllSectionsPage(),
+                  ),
+                );
+              },
+              child: const Text('جميع الأقسام',
+                  style: TextStyle(decoration: TextDecoration.underline, fontSize: 20, fontWeight: FontWeight.bold)),
             ),
           ],
         ),

@@ -8,8 +8,7 @@ class SectionCard extends StatelessWidget {
     return Container(
       height: 200,
       width: 360,
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(20), color: const Color.fromARGB(255, 221, 180, 228)),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: const Color(0xffD9D9D9)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [

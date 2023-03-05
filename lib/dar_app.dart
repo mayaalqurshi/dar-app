@@ -1,5 +1,6 @@
-import 'package:dar/pages/section_page.dart';
 import 'package:flutter/material.dart';
+
+import 'pages/onboarding_screen.dart';
 
 class DarApp extends StatelessWidget {
   const DarApp({super.key});
@@ -9,10 +10,11 @@ class DarApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.grey,
+          backgroundColor: Color(0xFFD9D9D9),
         ),
       ),
-      home: const SectionPage(),
+      home: const OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

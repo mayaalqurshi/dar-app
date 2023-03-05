@@ -10,7 +10,7 @@ class DeveloperCard extends StatelessWidget {
       height: 80,
       width: 300,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 221, 180, 228),
+        color: const Color(0xffD9D9D9),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(

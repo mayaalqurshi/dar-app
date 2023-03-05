@@ -1,6 +1,5 @@
+import 'package:dar/pages/onboarding_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'pages/onboarding_screen.dart';
 
 class DarApp extends StatelessWidget {
   const DarApp({super.key});

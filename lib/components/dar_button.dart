@@ -7,11 +7,13 @@ class DarButton extends StatefulWidget {
     required this.textButton,
     this.colorButton = const Color(0xff546E84),
     this.heightButton = 60,
+    this.widthButton = 360,
     required this.onTap,
   });
   final String textButton;
   final Color colorButton;
   final double heightButton;
+  final double widthButton;
   final VoidCallback onTap;
 
   @override
@@ -22,6 +24,7 @@ class _DarButtonState extends State<DarButton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      width: widget.widthButton,
       height: widget.heightButton,
       child: ElevatedButton(
         onPressed: widget.onTap,

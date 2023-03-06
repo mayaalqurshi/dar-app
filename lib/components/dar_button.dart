@@ -5,7 +5,7 @@ class DarButton extends StatefulWidget {
   const DarButton({
     super.key,
     required this.textButton,
-    this.colorButton = const Color(0xff546E84),
+    this.colorButton = const Color(0xffaab9a9),
     this.heightButton = 60,
     this.widthButton = 360,
     required this.onTap,
@@ -36,7 +36,7 @@ class _DarButtonState extends State<DarButton> {
         ),
         child: Text(
           widget.textButton,
-          style: GoogleFonts.markaziText(fontSize: 24),
+          style: GoogleFonts.markaziText(fontSize: 24, color: const Color(0xFF162f11)),
         ),
       ),
     );

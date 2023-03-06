@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../components/size_config.dart';
 import '../model/onboarding_content.dart';
@@ -22,9 +23,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   int _currentPage = 0;
   List colors = const [
-    Color(0xffDAD3C8),
-    Color(0xffFFE5DE),
-    Color(0xffDCF6E6),
+    Color(0xfffbf9f2),
+    Color(0xffaab9a9),
+    Color(0xfffbf9f2),
   ];
 
   AnimatedContainer _buildDots({
@@ -36,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         borderRadius: BorderRadius.all(
           Radius.circular(50),
         ),
-        color: Color(0xFF000000),
+        color: Color(0xFF162f11),
       ),
       margin: const EdgeInsets.only(right: 5),
       height: 10,
@@ -65,32 +66,30 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 itemCount: contents.length,
                 itemBuilder: (context, i) {
                   return Padding(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: const EdgeInsets.only(top: 80.0),
                     child: Column(
                       children: [
-                        Image.network(
+                        Image.asset(
                           contents[i].image,
                           height: SizeConfig.blockV! * 35,
                         ),
                         SizedBox(
                           height: (height >= 840) ? 60 : 30,
                         ),
-                        Text(
-                          contents[i].title,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: "Mulish",
-                            fontWeight: FontWeight.w600,
-                            fontSize: (width <= 550) ? 30 : 35,
-                          ),
-                        ),
+                        // Text(
+                        //   contents[i].title,
+                        //   textAlign: TextAlign.center,
+                        //   style: GoogleFonts.markaziText(
+                        //     fontWeight: FontWeight.w600,
+                        //     fontSize: (width <= 550) ? 30 : 35,
+                        //   ),
+                        // ),
                         const SizedBox(height: 15),
                         Text(
                           contents[i].desc,
-                          style: TextStyle(
-                            fontFamily: "Mulish",
+                          style: GoogleFonts.markaziText(
                             fontWeight: FontWeight.w300,
-                            fontSize: (width <= 550) ? 17 : 25,
+                            fontSize: (width <= 550) ? 20 : 25,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -127,7 +126,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
+                              backgroundColor: const Color(0xFF162f11),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
@@ -136,7 +135,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   : EdgeInsets.symmetric(horizontal: width * 0.2, vertical: 25),
                               textStyle: TextStyle(fontSize: (width <= 550) ? 13 : 17),
                             ),
-                            child: const Text("START"),
+                            child: Text("ابدأ", style: GoogleFonts.markaziText(fontSize: 20)),
                           ),
                         )
                       : Padding(
@@ -161,9 +160,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     fontSize: (width <= 550) ? 13 : 17,
                                   ),
                                 ),
-                                child: const Text(
-                                  "SKIP",
-                                  style: TextStyle(color: Colors.black),
+                                child: Text(
+                                  "تخطي",
+                                  style: GoogleFonts.markaziText(fontSize: 20, color: const Color(0xFF162f11)),
                                 ),
                               ),
                               ElevatedButton(
@@ -174,7 +173,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.black,
+                                  backgroundColor: const Color(0xFF162f11),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(50),
                                   ),
@@ -184,7 +183,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       : const EdgeInsets.symmetric(horizontal: 30, vertical: 25),
                                   textStyle: TextStyle(fontSize: (width <= 550) ? 13 : 17),
                                 ),
-                                child: const Text("NEXT"),
+                                child: Text("التالي", style: GoogleFonts.markaziText(fontSize: 20)),
                               ),
                             ],
                           ),

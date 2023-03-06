@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DarSearchCard extends StatelessWidget {
   const DarSearchCard({super.key});
@@ -9,31 +10,35 @@ class DarSearchCard extends StatelessWidget {
       height: 200,
       width: 360,
       decoration: BoxDecoration(
-        color: const Color(0xFFD9D9D9),
+        color: const Color(0xffaab9a9),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         children: [
-          const Text(
+          Text(
             'مالذي تبحث عنه ؟ ',
-            style: TextStyle(fontSize: 30),
+            style: GoogleFonts.markaziText(fontSize: 30, color: const Color(0xFF162f11)),
           ),
           const SizedBox(
             height: 18,
           ),
           Container(
             decoration:
-                BoxDecoration(color: const Color(0xFF959595), borderRadius: BorderRadiusDirectional.circular(20)),
+                BoxDecoration(color: const Color(0xfffbf9f2), borderRadius: BorderRadiusDirectional.circular(20)),
             width: 300,
             height: 40,
-            child: const Center(
+            child: Center(
               child: TextField(
                 textAlign: TextAlign.end,
+                cursorColor: const Color(0xFF162f11),
                 decoration: InputDecoration(
-                  hintText: 'ابحث',
-                  suffixIcon: Icon(Icons.search),
-                  border: InputBorder.none,
-                ),
+                    hintText: 'ابحث',
+                    suffixIcon: const Icon(
+                      Icons.search,
+                      color: Color(0xFF162f11),
+                    ),
+                    border: InputBorder.none,
+                    hintStyle: GoogleFonts.markaziText()),
               ),
             ),
           ),
@@ -45,8 +50,8 @@ class DarSearchCard extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color(0xFFFFFFFF),
               minimumSize: const Size(220, 40),
-              backgroundColor: const Color(0xFF959595),
-              textStyle: const TextStyle(fontSize: 20),
+              backgroundColor: const Color(0xFF162f11),
+              textStyle: GoogleFonts.markaziText(fontSize: 20),
             ),
             child: const Text(
               'ابحث',

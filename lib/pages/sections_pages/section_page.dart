@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/app_card.dart';
 import '../../components/dar_drawer.dart';
@@ -9,38 +10,43 @@ class SectionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Image.asset(
+          'assets/img/darlogo.jpg',
+          width: 160,
+        ),
+      ),
       body: Center(
         child: Column(
-          children: const [
-            SizedBox(
+          children: [
+            const SizedBox(
               height: 12,
             ),
             Text(
               'تطبيقات التوصيل',
-              style: TextStyle(fontSize: 20),
+              style: GoogleFonts.markaziText(fontSize: 20),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            AppCard(),
-            SizedBox(
+            const AppCard(),
+            const SizedBox(
               height: 20,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            AppCard(),
-            SizedBox(
+            const AppCard(),
+            const SizedBox(
               height: 20,
             ),
-            AppCard(),
+            const AppCard(),
           ],
         ),
       ),
       // Drawer
       endDrawer: const DarDrawer(),
-      backgroundColor: const Color(0xFFF4EDED),
+      backgroundColor: const Color(0xfffbf9f2),
     );
   }
 }

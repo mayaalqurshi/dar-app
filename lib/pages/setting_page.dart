@@ -10,7 +10,12 @@ class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Image.asset(
+          'assets/img/darlogo.jpg',
+          width: 160,
+        ),
+      ),
       endDrawer: const DarDrawer(),
       body: Center(
         child: Column(

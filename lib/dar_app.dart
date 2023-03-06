@@ -10,9 +10,10 @@ class DarApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.system,
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFD9D9D9),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xfffbf9f2),
           shadowColor: Colors.transparent,
+          iconTheme: IconThemeData(color: Color(0xFF162f11)),
         ),
         // colorScheme: ColorScheme(
         // // used fo buttons

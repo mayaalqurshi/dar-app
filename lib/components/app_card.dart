@@ -12,32 +12,36 @@ class AppCard extends StatelessWidget {
         height: 200,
         width: 360,
         decoration: BoxDecoration(
-          color: const Color(0xFFD9D9D9),
+          color: const Color((0xffaab9a9)),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: const Center(
-          child: Text(
-            'التطبيق الاول ',
-            style: TextStyle(fontSize: 20),
-          ),
-        ),
+        child: Center(
+            child: Image.network(
+          'https://upload.wikimedia.org/wikipedia/ar/thumb/0/0b/Careem_logo_AR.svg/1280px-Careem_logo_AR.svg.png',
+          width: 200,
+        )
+            //  Text(
+            //   'التطبيق الاول ',
+            //   style: TextStyle(fontSize: 20),
+            // ),
+            ),
       ),
       Container(
         height: 60,
         width: 360,
         decoration: BoxDecoration(
-          color: const Color(0xFF959595),
+          // color: const Color(0xFF959595),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(
             child: Padding(
           padding: const EdgeInsets.only(left: 100, right: 100),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Icon(Icons.call, color: Colors.white),
-              Icon(Icons.link, color: Colors.white),
-              Icon(Icons.assistant_navigation, color: Colors.white)
+              // Icon(Icons.call, color: Colors.white),
+              Icon(Icons.link, color: Colors.white, size: 50),
+              // Icon(Icons.assistant_navigation, color: Colors.white)
             ],
           ),
         )),

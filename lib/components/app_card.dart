@@ -16,8 +16,8 @@ class AppCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(
-            child: Image.network(
-          'https://upload.wikimedia.org/wikipedia/ar/thumb/0/0b/Careem_logo_AR.svg/1280px-Careem_logo_AR.svg.png',
+            child: Image.asset(
+          'assets/img/1280px-Careem_logo_AR.svg.png',
           width: 200,
         )
             //  Text(

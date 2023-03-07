@@ -16,6 +16,7 @@ class _DarFloatingButtonState extends State<DarFloatingButton> {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: widget.onTap,
+      backgroundColor: const Color(0xffAA5859),
       child: const Icon(
         Icons.add,
       ),

@@ -140,7 +140,8 @@ class Section {
     Section(
       secId: '6',
       cat_id: '2',
-      image: 'https://upload.wikimedia.org/wikipedia/ar/thumb/0/0b/Careem_logo_AR.svg/1280px-Careem_logo_AR.svg.png',
+      image:
+          'https://image.cnbcfm.com/api/v1/image/105814477-1553599428640gettyimages-1047444988.jpeg?v=1677583288&w=929&h=523&vtcrop=y',
       name: ' كريم',
       rate: '٤.٦',
       url: 'https://apps.apple.com/sa/app/careem-ride-delivery-pay/id592978487',
@@ -148,8 +149,7 @@ class Section {
     Section(
       secId: '7',
       cat_id: '2',
-      image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png',
+      image: 'https://radar.assets.avrotros.nl/user_upload_2020/23032022-uber-prijsstijging.jpg',
       name: 'اوبر',
       rate: '٤.٧',
       url: 'https://apps.apple.com/sa/app/uber-request-a-ride/id368677368',
@@ -157,8 +157,7 @@ class Section {
     Section(
       secId: '8',
       cat_id: '2',
-      image:
-          'https://img1.wsimg.com/isteam/ip/da8381e9-83e7-45d2-a409-e6664d8af3ae/Jeeny-Logo-550x550px-1.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25',
+      image: 'https://www.orange.jo/ar/orangemoney/PublishingImages/Orange-money-images/jeeny.png',
       name: 'جيني',
       rate: '٣.٧',
       url: 'https://apps.apple.com/sa/app/jeeny-%D8%AC%D9%8A%D9%86%D9%8A/id1178701124',
@@ -166,7 +165,7 @@ class Section {
     Section(
       secId: '9',
       cat_id: '2',
-      image: 'https://tastibh.com/img/logo44.png',
+      image: 'https://pbs.twimg.com/media/FnPXsVMWYAE-6YO?format=jpg&name=large',
       name: 'وصليني',
       rate: '٤.٥',
       url: 'https://apps.apple.com/sa/app/%D9%88%D8%B5-%D9%84%D9%8A%D9%86%D9%8A/id1450930272',
@@ -174,7 +173,7 @@ class Section {
     Section(
       secId: '10',
       cat_id: '2',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Bolt_logo.png/800px-Bolt_logo.png',
+      image: 'https://bolt.eu/og-img.jpg',
       name: 'بولت',
       rate: '٤.٦',
       url: 'https://apps.apple.com/sa/app/bolt-request-a-ride/id675033630',
@@ -182,7 +181,7 @@ class Section {
     Section(
       secId: '11',
       cat_id: '3',
-      image: 'https://m.eyeofriyadh.com/events/events_images/2019/10/2efdd0da40cb8.jpg',
+      image: 'https://www.ngmisr.com/wp-content/uploads/2022/10/%D9%88%D9%86%D8%AA%D8%B1-.png',
       name: 'ونتر وندر لاند',
       rate: '٤.٦',
       url: 'https://goo.gl/maps/CzKc9ATLenwH6cAS8',
@@ -215,7 +214,7 @@ class Section {
     Section(
       secId: '15',
       cat_id: '4',
-      image: 'https://billionairesociety.com/riyadh-en/uploads/sites/9/2020/11/Billionaire-Riyadh-logo-White2.png',
+      image: 'https://pbs.twimg.com/media/ErXtBtGXUAA59tn.jpg',
       name: 'بليونير ',
       rate: '٣.٥',
       url: 'https://goo.gl/maps/ErWDmt8AYrJGb6Tq8',
@@ -223,7 +222,8 @@ class Section {
     Section(
       secId: '16',
       cat_id: '4',
-      image: 'https://images.redro.menu/pm.v1.0/myazu/riyadh/2020/12/09/20201209_myazu-riyadh-logo.png',
+      image:
+          'https://i0.wp.com/www.des-traveler.com/wp-content/uploads/2022/06/Kick-off-2021-in-style___MYAZUSAUDI___Riyadh-_riyadhrestaurantsJPG-scaled.jpg?resize=600%2C600&ssl=1',
       name: 'ميازو  ',
       rate: '٤.٢',
       url: 'https://goo.gl/maps/f31aRRsi6YNJGUyq5',
@@ -231,8 +231,7 @@ class Section {
     Section(
       secId: '17',
       cat_id: '4',
-      image:
-          'https://uploads-ssl.webflow.com/6347bcc78a91bf1447e211c7/6347ded68c56418065c0c445_Arabic%20Logo%20Final%20(1).png',
+      image: 'https://eatapp.co/riyadh-restaurants/images/le-maschou-7946dc-restaurant-1.jpg?height=500&width=850',
       name: 'لوماشو ',
       rate: '٤.٢',
       url: 'https://goo.gl/maps/XZGhbtgK1CP7QzSz5',
@@ -240,7 +239,7 @@ class Section {
     Section(
       secId: '18',
       cat_id: '4',
-      image: 'https://serafinaboston.com/wp-content/uploads/logo_main-blue-2.png',
+      image: 'https://cafesriyadh.com/wp-content/uploads/2020/02/serafina-riyadh.jpg',
       name: 'سيرافينا ',
       rate: '٤.٠',
       url: 'https://goo.gl/maps/uuBj5RCrkZBETvTu8',
@@ -248,7 +247,7 @@ class Section {
     Section(
       secId: '19',
       cat_id: '5',
-      image: 'https://riyadh-park.com/wp-content/uploads/2019/09/RIYADH-PARK_-CORPORATE-GUIDELINE-2018-copy-10.png',
+      image: 'https://whatsonsaudiarabia.com/ar/wp-content/uploads/2022/04/thumb_46806_700_400_0_0_exact.jpg',
       name: 'الرياض بارك ',
       rate: '٤.٤',
       url: 'https://goo.gl/maps/UTbQMPWs9bgcJNvT6',
@@ -256,7 +255,8 @@ class Section {
     Section(
       secId: '20',
       cat_id: '5',
-      image: 'https://mallsruh.com/img/mall/sentriaMAll.png',
+      image:
+          'https://cdn.saudigates.net/wp-content/uploads/2022/05/%D8%B3%D9%86%D8%AA%D8%B1%D9%8A%D8%A7-%D9%85%D9%88%D9%84-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6-3.webp',
       name: 'سنتريا ',
       rate: '٤.٤',
       url: 'https://goo.gl/maps/qpsS1QDrTxVwQEMJA',
@@ -264,7 +264,7 @@ class Section {
     Section(
       secId: '21',
       cat_id: '5',
-      image: 'https://mallsruh.com/img/mall/AlnakeelMall.png',
+      image: 'https://www.urtrips.com/wp-content/uploads/2023/01/Dammam-Malls-5.jpg',
       name: 'النخيل مول  ',
       rate: '٤.٣',
       url: 'https://goo.gl/maps/WacDJ4tr92MR6pty8',
@@ -272,7 +272,8 @@ class Section {
     Section(
       secId: '22',
       cat_id: '5',
-      image: 'http://panorama-mall.com/wp-content/uploads/2020/11/MALLS-ALL-LOGOS-2020-02-1.png',
+      image:
+          'https://omrabookings.com/blog/wp-content/uploads/2022/01/%D8%A8%D8%A7%D9%86%D9%88%D8%B1%D8%A7%D9%85%D8%A7-%D9%85%D9%88%D9%84-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6.jpg',
       name: 'بانوراما ',
       rate: '٤.٤',
       url: 'https://goo.gl/maps/S6ZQNDibRkiTgo766',
@@ -314,7 +315,7 @@ class Section {
     Section(
       secId: '27',
       cat_id: '7',
-      image: 'https://1000logos.net/wp-content/uploads/2021/04/Ritz-Carlton-logo.png',
+      image: 'http://www.ogerinternational.com/assets/Galleries/oger-lhpr-03.jpg',
       name: 'الرتز كارلتون ',
       rate: '٤.٦',
       url: 'https://goo.gl/maps/aZKv51RmDL1iQpt87',
@@ -322,7 +323,8 @@ class Section {
     Section(
       secId: '28',
       cat_id: '7',
-      image: 'https://1000logos.net/wp-content/uploads/2019/12/M%C3%B6venpick-Logo.png',
+      image:
+          'https://www.arrajol.com/sites/default/files/2019/08/19/275121-1.%D9%81%D9%86%D8%AF%D9%82%20%D9%85%D9%88%D9%81%D9%86%D8%A8%D9%8A%D9%83%20%D9%85%D9%83%D8%A9..%20%D8%A7%D9%84%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A%20%D9%84%D8%B2%D9%88%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%A7%D8%AC%20%D8%A8%D9%8A%D8%AA%20%D8%A7%D9%84%D9%84%D9%87%20%D8%A7%D9%84%D8%AD%D8%B1%D8%A7%D9%85.jpg',
       name: 'موفنبيك ',
       rate: '٤.٧',
       url: 'https://goo.gl/maps/K279UnKb3N1M8kJY6',
@@ -330,7 +332,8 @@ class Section {
     Section(
       secId: '29',
       cat_id: '7',
-      image: 'https://assets.stickpng.com/images/589a46f65aa6293a4aac48b4.png',
+      image:
+          'https://cf.bstatic.com/xdata/images/hotel/max1024x768/170588815.jpg?k=67a6db0e2d93bcec29c7b18b0d80373ddfd95763ef7e23e74517ed78df54347c&o=&hp=1',
       name: 'هليتون ',
       rate: '٤.٣',
       url: 'https://goo.gl/maps/dHir9WDzt1zWTixp6',
@@ -338,7 +341,8 @@ class Section {
     Section(
       secId: '30',
       cat_id: '7',
-      image: 'https://brairahotels.com/wp-content/uploads/2020/08/braira-new-logo.png',
+      image:
+          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/16/9a/0c/hotel-view-at-night.jpg?w=700&h=-1&s=1',
       name: 'بريرا ',
       rate: '٤.١',
       url: 'https://goo.gl/maps/FGHdQXRNp6gT38Gk8',
@@ -346,7 +350,7 @@ class Section {
     Section(
       secId: '31',
       cat_id: '8',
-      image: 'http://www.kfshrc.edu.sa/templates/shared/img/kfshrc_logo_v.png',
+      image: 'https://i0.wp.com/eduschool40.blog/wp-content/uploads/2021/11/5187466-1804471750.jpg',
       name: 'مستشفى الملك فيصل ',
       rate: '٤.١',
       url: 'https://goo.gl/maps/V1dVWoKUbCERvQGo7',
@@ -354,7 +358,8 @@ class Section {
     Section(
       secId: '32',
       cat_id: '8',
-      image: 'https://hmguae.com/wp-content/uploads/2022/04/dr.sulaiman-logo-01.png',
+      image:
+          'https://vid.alarabiya.net/images/2020/02/06/f1ac83c2-fc94-4be3-bb90-f569892f5a59/f1ac83c2-fc94-4be3-bb90-f569892f5a59_16x9_600x338.JPG',
       name: 'الحبيب ',
       rate: '٣.١',
       url: 'https://goo.gl/maps/aP95XRnz1hXJAZDA6',
@@ -362,8 +367,7 @@ class Section {
     Section(
       secId: '33',
       cat_id: '8',
-      image:
-          'https://upload.wikimedia.org/wikipedia/ar/thumb/2/28/%D8%A7%D9%84%D8%B4%D8%A4%D9%88%D9%86_%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9_%D9%84%D9%84%D8%AD%D8%B1%D8%B3_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A.svg/1200px-%D8%A7%D9%84%D8%B4%D8%A4%D9%88%D9%86_%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9_%D9%84%D9%84%D8%AD%D8%B1%D8%B3_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A.svg.png',
+      image: 'https://pbs.twimg.com/media/EhTrMB8XcAAOCV8.jpg',
       name: 'الحرس الوطني ',
       rate: '٣.١',
       url: 'https://goo.gl/maps/HAehEQwTYj9urPM98',

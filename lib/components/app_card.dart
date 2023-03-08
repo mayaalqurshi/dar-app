@@ -33,16 +33,24 @@ class _AppCardState extends State<AppCard> {
       ),
       child: Column(
         children: [
-          Container(
-            height: 150,
-            width: 360,
-            clipBehavior: Clip.hardEdge,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-            ),
-            child: Image.network(
-              widget.sectionInfo.image,
-              fit: BoxFit.fitWidth,
+          InkWell(
+            onTap: () {
+              _url = Uri.parse(
+                widget.sectionInfo.url,
+              );
+              _launchUrl();
+            },
+            child: Container(
+              height: 150,
+              width: 360,
+              clipBehavior: Clip.hardEdge,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+              ),
+              child: Image.network(
+                widget.sectionInfo.image,
+                fit: BoxFit.fitWidth,
+              ),
             ),
           ),
           Container(
@@ -55,17 +63,10 @@ class _AppCardState extends State<AppCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InkWell(
-                    onTap: () {
-                      _url = Uri.parse(
-                        widget.sectionInfo.url,
-                      );
-                      _launchUrl();
-                    },
-                    child: Image.network(
-                      'https://cdn-icons-png.flaticon.com/512/376/376109.png',
-                      height: 30,
-                    )),
+                Image.network(
+                  'https://cdn-icons-png.flaticon.com/512/376/376109.png',
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: Text(

@@ -1,14 +1,8 @@
-
 import 'package:dar/pages/home_page.dart';
 import 'package:dar/pages/other_services_pages/other_services_page.dart';
 import 'package:dar/pages/sections_pages/all_sections_page.dart';
-
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
-
-import '../pages/home_page.dart';
-import '../pages/sections_pages/all_sections_page.dart';
-import '../pages/setting_page.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -18,22 +12,22 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  var currentIndex = 0;
+  var currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     final pages = [
-      const HomePage(),
-      const AllSectionsPage(),
       const OtherServicesPage(),
+      const AllSectionsPage(),
+      const HomePage(),
     ];
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: FlashyTabBar(
         items: [
           FlashyTabBarItem(
-            icon: const Icon(Icons.home, color: Color(0xffaab9a9)),
+            icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
             title: const Text(
-              'الصفحة الرئيسية',
+              'خدمات اخرى',
               style: TextStyle(color: Color(0xffaab9a9)),
             ),
           ),
@@ -45,9 +39,9 @@ class _NavBarState extends State<NavBar> {
             ),
           ),
           FlashyTabBarItem(
-            icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
+            icon: const Icon(Icons.home, color: Color(0xffaab9a9)),
             title: const Text(
-              'خدمات اخرى',
+              'الصفحة الرئيسية',
               style: TextStyle(color: Color(0xffaab9a9)),
             ),
           ),

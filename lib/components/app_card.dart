@@ -1,51 +1,75 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class AppCard extends StatelessWidget {
+import '../model/section_model.dart';
+
+class AppCard extends StatefulWidget {
   const AppCard({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+    required this.sectionInfo,
+  });
+  final Section sectionInfo;
+  @override
+  State<AppCard> createState() => _AppCardState();
+}
+
+class _AppCardState extends State<AppCard> {
+  var _url = Uri.parse('https://goo.gl/maps/uuBj5RCrkZBETvTu8');
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Stack(alignment: AlignmentDirectional.bottomStart, children: [
-      Container(
-        height: 200,
-        width: 360,
-        decoration: BoxDecoration(
-          color: const Color((0xffaab9a9)),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Center(
-            child: Image.asset(
-          'assets/img/1280px-Careem_logo_AR.svg.png',
-          width: 200,
-        )
-            //  Text(
-            //   'التطبيق الاول ',
-            //   style: TextStyle(fontSize: 20),
-            // ),
-            ),
+    return Container(
+      height: 200,
+      width: 360,
+      decoration: BoxDecoration(
+        color: const Color((0xffaab9a9)),
+        borderRadius: BorderRadius.circular(20),
       ),
-      Container(
-        height: 60,
-        width: 360,
-        decoration: BoxDecoration(
-          // color: const Color(0xFF959595),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Center(
-            child: Padding(
-          padding: const EdgeInsets.only(left: 100, right: 100),
-          child: Row(
+      child: Column(
+        children: [
+          Container(
+            height: 150,
+            width: 150,
+            decoration: BoxDecoration(
+              color: const Color((0xffaab9a9)),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Image.network(
+              widget.sectionInfo.image,
+              width: 200,
+            ),
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              // Icon(Icons.call, color: Colors.white),
-              Icon(Icons.link, color: Colors.white, size: 50),
-              // Icon(Icons.assistant_navigation, color: Colors.white)
+            children: [
+              InkWell(
+                  onTap: () {
+                    _url = Uri.parse(
+                      widget.sectionInfo.url,
+                    );
+                    _launchUrl();
+                  },
+                  child: Image.network(
+                    'https://cdn-icons-png.flaticon.com/512/9533/9533370.png',
+                    height: 30,
+                  )),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  widget.sectionInfo.name,
+                  style: GoogleFonts.markaziText(fontSize: 26),
+                ),
+              ),
             ],
           ),
-        )),
+        ],
       ),
-    ]);
+    );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:dar/pages/home_page.dart';
+import 'package:dar/pages/other_services_pages/other_services_page.dart';
 import 'package:dar/pages/sections_pages/all_sections_page.dart';
-import 'package:dar/pages/setting_page.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class _NavBarState extends State<NavBar> {
     final pages = [
       const HomePage(),
       const AllSectionsPage(),
-      const SettingPage(),
+      const OtherServicesPage(),
     ];
     return Scaffold(
       body: pages[currentIndex],
@@ -39,9 +39,9 @@ class _NavBarState extends State<NavBar> {
             ),
           ),
           FlashyTabBarItem(
-            icon: const Icon(Icons.settings, color: Color(0xffaab9a9)),
+            icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
             title: const Text(
-              'الإعدادات',
+              'خدمات اخرى',
               style: TextStyle(color: Color(0xffaab9a9)),
             ),
           ),

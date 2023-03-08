@@ -20,7 +20,7 @@ class _DarMainTitleState extends State<DarMainTitle> {
         fontSize: 24,
         fontWeight: FontWeight.w500,
       ),
-      textAlign: TextAlign.end,
+      textAlign: TextAlign.center,
     );
   }
 }

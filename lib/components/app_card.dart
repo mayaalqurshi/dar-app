@@ -38,7 +38,6 @@ class _AppCardState extends State<AppCard> {
             width: 360,
             clipBehavior: Clip.hardEdge,
             decoration: const BoxDecoration(
-              // color: const Color((0xffaab9a9)),
               borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
             ),
             child: Image.network(

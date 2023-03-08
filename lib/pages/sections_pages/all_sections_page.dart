@@ -1,3 +1,4 @@
+import 'package:dar/components/dar_main_title.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/dar_drawer.dart';
@@ -17,18 +18,26 @@ class AllSectionsPage extends StatelessWidget {
         ),
       ),
       endDrawer: const DarDrawer(),
-      body: GridView.count(
-        primary: false,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        crossAxisCount: 2,
-        children: <Widget>[
-          for (final category in Category.categories)
-            // ...[
-            SectionCard(categories: category),
-          const SizedBox(height: 20),
-          // ],
+      body: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: DarMainTitle(MainTitle: 'جميع الاقسام'),
+          ),
+          Expanded(
+            child: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              children: <Widget>[
+                for (final category in Category.categories) SectionCard(categories: category),
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
         ],
       ),
       backgroundColor: const Color(0xfffbf9f2),

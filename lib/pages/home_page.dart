@@ -1,3 +1,4 @@
+import 'package:dar/components/dar_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -5,6 +6,7 @@ import '../components/dar_drawer.dart';
 import '../components/dar_drop_button.dart';
 import '../components/dar_most_used_apps.dart';
 import '../components/dar_search_card.dart';
+import '../model/mAppUsed.dart';
 import 'sections_pages/all_sections_page.dart';
 
 const List<String> list = <String>['الرياض', 'مكة', 'المدينة', 'جدة', 'الشرقية', 'ابها'];
@@ -17,25 +19,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // title: Image.asset(
-          //   'assets/img/darlogo.jpg',
-          //   width: 160,
-          // ),
-          ),
+        title: Image.asset(
+          'assets/img/darlogo.jpg',
+          width: 160,
+        ),
+      ),
       body: ListView(
         children: [
           Center(
             child: Column(
               children: [
-                Image.asset(
-                  'assets/img/Logo.jpg',
-                  height: 180,
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const DarDropdownButton(),
-                    Text(':اختر المدينة ', style: GoogleFonts.markaziText(fontSize: 26))
+                    Text(':اختر المدينة ', style: GoogleFonts.markaziText(fontSize: 18))
                   ],
                 ),
                 const SizedBox(
@@ -47,43 +45,47 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   'التطبيقات الأكثر استخدماً',
-                  style: GoogleFonts.markaziText(fontSize: 26),
+                  style: GoogleFonts.markaziText(fontSize: 20),
                 ),
                 const SizedBox(
                   height: 12,
                 ),
-                const MostUsedApps(),
+                for (final mAppUsed in MAppUsed.mAppUsed)
+                  if (mAppUsed.id == '5')
+                    MostUsedApps(
+                      mAppUsed: mAppUsed,
+                    ),
                 const SizedBox(
                   height: 12,
                 ),
-                // Text(
-                //   'الأقسام',
-                //   style: GoogleFonts.markaziText(fontSize: 20),
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'تطبيقات التوصيل',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'الفعاليات',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'تطبيقات المواصلات',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
+                Text(
+                  'الأقسام',
+                  style: GoogleFonts.markaziText(fontSize: 20),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                DarButton(
+                  textButton: 'تطبيقات التوصيل',
+                  onTap: () {},
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                DarButton(
+                  textButton: 'الفعاليات',
+                  onTap: () {},
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                DarButton(
+                  textButton: 'تطبيقات المواصلات',
+                  onTap: () {},
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
                 TextButton(
                   onPressed: () {
                     Navigator.push(
@@ -105,15 +107,6 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: const Color(0xFF959595),
-      //   child: const Icon(
-      //     Icons.headset_mic,
-      //     color: Colors.black,
-      //   ),
-      // ),
-      // Drawer
       endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );

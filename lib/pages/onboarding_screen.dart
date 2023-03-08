@@ -1,9 +1,9 @@
+import 'package:dar/components/navBar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../components/size_config.dart';
 import '../model/onboarding_content.dart';
-import 'home_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -121,7 +121,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: ((context) => const HomePage()),
+                                  builder: ((context) => const NavBar()),
                                 ),
                               );
                             },
@@ -149,7 +149,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: ((context) => const HomePage()),
+                                      builder: ((context) => const NavBar()),
                                     ),
                                   );
                                 },

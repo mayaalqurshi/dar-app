@@ -70,7 +70,7 @@ class MAppUsed {
     MAppUsed(
       id: '10',
       cityId: '4',
-      image: 'hhttps://pbs.twimg.com/profile_images/1600869068025782273/4ut_xe3a_400x400.jpg',
+      image: 'https://pbs.twimg.com/profile_images/1600869068025782273/4ut_xe3a_400x400.jpg',
     ),
     MAppUsed(
       id: '11',

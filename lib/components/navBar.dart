@@ -1,3 +1,4 @@
+import 'package:dar/pages/about_us_page.dart';
 import 'package:dar/pages/home_page.dart';
 import 'package:dar/pages/other_services_pages/other_services_page.dart';
 import 'package:dar/pages/sections_pages/all_sections_page.dart';
@@ -12,10 +13,11 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  var currentIndex = 2;
+  var currentIndex = 3;
   @override
   Widget build(BuildContext context) {
     final pages = [
+      const AboutUsPages(),
       const OtherServicesPage(),
       const AllSectionsPage(),
       const HomePage(),
@@ -24,6 +26,13 @@ class _NavBarState extends State<NavBar> {
       body: pages[currentIndex],
       bottomNavigationBar: FlashyTabBar(
         items: [
+          FlashyTabBarItem(
+            icon: const Icon(Icons.people_alt_outlined, color: Color(0xffaab9a9)),
+            title: const Text(
+              'نبذة عننا ',
+              style: TextStyle(color: Color(0xffaab9a9)),
+            ),
+          ),
           FlashyTabBarItem(
             icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
             title: const Text(

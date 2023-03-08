@@ -6,6 +6,8 @@ class DarSearchCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchController = TextEditingController();
+
     return Container(
       height: 200,
       width: 360,
@@ -16,7 +18,7 @@ class DarSearchCard extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'مالذي تبحث عنه ؟ ',
+            'ما الذي تبحث عنه ؟ ',
             style: GoogleFonts.markaziText(fontSize: 30, color: const Color(0xFF162f11)),
           ),
           const SizedBox(
@@ -29,6 +31,7 @@ class DarSearchCard extends StatelessWidget {
             height: 40,
             child: Center(
               child: TextField(
+                controller: searchController,
                 textAlign: TextAlign.end,
                 cursorColor: const Color(0xFF162f11),
                 decoration: InputDecoration(

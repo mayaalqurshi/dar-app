@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../components/dar_drawer.dart';
 import '../components/dar_drop_button.dart';
 import '../components/dar_most_used_apps.dart';
 import '../components/dar_search_card.dart';
@@ -94,7 +93,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );
   }

@@ -15,7 +15,6 @@ class _AddCitizensState extends State<AddCitizens> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: const DarDrawer(),
       body: SafeArea(
         child: Column(
           children: const [

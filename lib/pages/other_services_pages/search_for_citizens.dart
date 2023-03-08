@@ -38,7 +38,6 @@ class _SearchForCitizensState extends State<SearchForCitizens> {
     log('Count: ${localInfo.length}');
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: const DarDrawer(),
       body: ListView(
         physics: const NeverScrollableScrollPhysics(),
         children: [

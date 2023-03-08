@@ -28,45 +28,54 @@ class _AppCardState extends State<AppCard> {
       height: 200,
       width: 360,
       decoration: BoxDecoration(
-        color: const Color((0xffaab9a9)),
+        color: const Color.fromARGB(255, 202, 211, 201),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         children: [
           Container(
             height: 150,
-            width: 150,
-            decoration: BoxDecoration(
-              color: const Color((0xffaab9a9)),
-              borderRadius: BorderRadius.circular(20),
+            width: 360,
+            clipBehavior: Clip.hardEdge,
+            decoration: const BoxDecoration(
+              // color: const Color((0xffaab9a9)),
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
             ),
             child: Image.network(
               widget.sectionInfo.image,
-              width: 200,
+              fit: BoxFit.fitWidth,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                  onTap: () {
-                    _url = Uri.parse(
-                      widget.sectionInfo.url,
-                    );
-                    _launchUrl();
-                  },
-                  child: Image.network(
-                    'https://cdn-icons-png.flaticon.com/512/9533/9533370.png',
-                    height: 30,
-                  )),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Text(
-                  widget.sectionInfo.name,
-                  style: GoogleFonts.markaziText(fontSize: 26),
+          Container(
+            height: 50,
+            width: 360,
+            decoration: const BoxDecoration(
+              color: Color.fromRGBO(63, 70, 63, 1),
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                    onTap: () {
+                      _url = Uri.parse(
+                        widget.sectionInfo.url,
+                      );
+                      _launchUrl();
+                    },
+                    child: Image.network(
+                      'https://cdn-icons-png.flaticon.com/512/9533/9533370.png',
+                      height: 30,
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    widget.sectionInfo.name,
+                    style: GoogleFonts.markaziText(fontSize: 26, color: Colors.white),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

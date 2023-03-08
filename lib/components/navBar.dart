@@ -1,8 +1,9 @@
-import 'package:dar/pages/home_page.dart';
-import 'package:dar/pages/sections_pages/all_sections_page.dart';
-import 'package:dar/pages/setting_page.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
+
+import '../pages/home_page.dart';
+import '../pages/sections_pages/all_sections_page.dart';
+import '../pages/setting_page.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});

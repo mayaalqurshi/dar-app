@@ -54,10 +54,9 @@ class HomePage extends StatelessWidget {
                   height: 12,
                 ),
                 for (final mAppUsed in MAppUsed.mAppUsed)
-                  if (mAppUsed.id == '5')
-                    MostUsedApps(
-                      mAppUsed: mAppUsed,
-                    ),
+                  MostUsedApps(
+                    mAppUsed: mAppUsed,
+                  ),
                 const SizedBox(
                   height: 12,
                 ),

@@ -64,7 +64,7 @@ class _AppCardState extends State<AppCard> {
                       _launchUrl();
                     },
                     child: Image.network(
-                      'https://cdn-icons-png.flaticon.com/512/9533/9533370.png',
+                      'https://cdn-icons-png.flaticon.com/512/376/376109.png',
                       height: 30,
                     )),
                 Padding(

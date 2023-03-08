@@ -6,7 +6,6 @@ import '../components/dar_drop_button.dart';
 import '../components/dar_most_used_apps.dart';
 import '../components/dar_search_card.dart';
 import '../model/mAppUsed.dart';
-import 'sections_pages/all_sections_page.dart';
 
 const List<String> list = <String>['الرياض', 'مكة', 'المدينة', 'جدة', 'الشرقية', 'ابها'];
 
@@ -17,12 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          // title: Image.asset(
-          //   'assets/img/darlogo.jpg',
-          //   width: 160,
-          // ),
-          ),
+      appBar: AppBar(),
       body: ListView(
         children: [
           Center(
@@ -53,72 +47,23 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 12,
                 ),
-                for (final mAppUsed in MAppUsed.mAppUsed)
-                  if (mAppUsed.id == '5')
-                    MostUsedApps(
-                      mAppUsed: mAppUsed,
-                    ),
-                const SizedBox(
-                  height: 12,
+                Row(
+                  children: [
+                    for (final mAppUsed in MAppUsed.mAppUsed)
+                      if (mAppUsed.id == '6')
+                        MostUsedApps(
+                          mAppUsed: mAppUsed,
+                        ),
+                  ],
                 ),
-                // Text(
-                //   'الأقسام',
-                //   style: GoogleFonts.markaziText(fontSize: 20),
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'تطبيقات التوصيل',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'الفعاليات',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                // DarButton(
-                //   textButton: 'تطبيقات المواصلات',
-                //   onTap: () {},
-                // ),
-                // const SizedBox(
-                //   height: 12,
-                // ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const AllSectionsPage(),
-                      ),
-                    );
-                  },
-                  child: Text('جميع الأقسام',
-                      style: GoogleFonts.markaziText(
-                          decoration: TextDecoration.underline,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: const Color(0xFF162f11))),
+                const SizedBox(
+                  height: 20,
                 ),
               ],
             ),
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: const Color(0xFF959595),
-      //   child: const Icon(
-      //     Icons.headset_mic,
-      //     color: Colors.black,
-      //   ),
-      // ),
-      // Drawer
       endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );

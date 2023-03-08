@@ -21,7 +21,6 @@ class AllSectionsPage extends StatelessWidget {
           width: 160,
         ),
       ),
-      endDrawer: const DarDrawer(),
       body: Column(
         children: [
           const Padding(

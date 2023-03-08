@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.16"
+  angles:
+    dependency: transitive
+    description:
+      name: angles
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   archive:
     dependency: transitive
     description:
@@ -29,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.9.0"
+  bezier:
+    dependency: transitive
+    description:
+      name: bezier
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -219,6 +233,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.15"
+  jelly_anim:
+    dependency: "direct main"
+    description:
+      name: jelly_anim
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.7"
   js:
     dependency: transitive
     description:
@@ -345,6 +366,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  random_color:
+    dependency: transitive
+    description:
+      name: random_color
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6-nullsafety"
   sky_engine:
     dependency: transitive
     description: flutter

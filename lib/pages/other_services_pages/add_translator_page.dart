@@ -15,7 +15,6 @@ class _AddTranslatorState extends State<AddTranslator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: const DarDrawer(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,

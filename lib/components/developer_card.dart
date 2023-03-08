@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class DeveloperCard extends StatefulWidget {
   const DeveloperCard({
@@ -28,6 +27,16 @@ class _DeveloperCardState extends State<DeveloperCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Image.network(
+              'https://static.thenounproject.com/png/3497808-200.png',
+              height: 45,
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
           Text(
             widget.textName,
             style: GoogleFonts.markaziText(fontSize: 20, color: const Color(0xFF162f11)),
@@ -39,25 +48,25 @@ class _DeveloperCardState extends State<DeveloperCard> {
           //   linkedIn,
           //   style: TextStyle(fontSize: 18),
           // ),
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Image.network(
-                  'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-                  height: 25,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Image.network(
-                  'https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png',
-                  height: 25,
-                ),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(right: 8.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.end,
+          //     children: [
+          //       Image.network(
+          //         'https://cdn-icons-png.flaticon.com/512/25/25231.png',
+          //         height: 25,
+          //       ),
+          //       const SizedBox(
+          //         width: 10,
+          //       ),
+          //       Image.network(
+          //         'https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png',
+          //         height: 25,
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );

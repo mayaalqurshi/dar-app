@@ -30,7 +30,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Color(0xfffbf9f2),
+        ),
+      ),
       body: ListView(
         children: [
           Center(

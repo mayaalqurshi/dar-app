@@ -18,7 +18,7 @@ List<OnboardingContents> contents = [
   ),
   OnboardingContents(
     title: "",
-    image: 'assets/img/map.png',
+    image: 'assets/img/pngtree-vector-bulb-idea-clipart-design-in-yellow-and-gray-color-png-image_6352155.png',
     desc: "في تطبيق واحد سنجمع اكثر الاماكن زيارة واكثر التطبيقات المستخدمة في المدينة التي تحددها ",
   ),
   OnboardingContents(

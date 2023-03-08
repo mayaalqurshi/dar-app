@@ -72,21 +72,17 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 12,
                 ),
-
-                Row(
-                  children: [
-                    for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
-                      MostUsedApps(
-                        mAppUsed: mAppUsed,
-                      ),
-                  ],
-                ),
-
-                for (final mAppUsed in MAppUsed.mAppUsed)
-                  MostUsedApps(
-                    mAppUsed: mAppUsed,
+                Padding(
+                  padding: const EdgeInsets.only(left: 12, top: 10),
+                  child: Row(
+                    children: [
+                      for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
+                        MostUsedApps(
+                          mAppUsed: mAppUsed,
+                        ),
+                    ],
                   ),
-
+                ),
                 const SizedBox(
                   height: 12,
                 ),

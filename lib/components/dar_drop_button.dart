@@ -1,23 +1,22 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../model/mAppUsed.dart';
 import '../pages/home_page.dart';
-import 'dar_most_used_apps.dart';
 
 class DarDropdownButton extends StatefulWidget {
-  const DarDropdownButton({super.key});
-
+  const DarDropdownButton({super.key, required this.onMenuChanged});
+  final Function(String) onMenuChanged;
   @override
   State<DarDropdownButton> createState() => _DarDropdownButtonState();
 }
 
 class _DarDropdownButtonState extends State<DarDropdownButton> {
-  String dropdownValue = list.first;
-
+  DarMenuItem dropdownValue = list.first;
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
+    return DropdownButton<DarMenuItem>(
       icon: const Icon(Icons.keyboard_arrow_down, size: 20),
       value: dropdownValue,
       elevation: 16,
@@ -26,25 +25,18 @@ class _DarDropdownButtonState extends State<DarDropdownButton> {
         height: 1,
         color: const Color(0xFF162f11),
       ),
-      onChanged: (String? value) {
+      onChanged: (value) {
         // This is called when the user selects an item.
+        log(value!.id);
         setState(() {
-          dropdownValue = value!;
-          // if (value == 'الرياض') {
-          //   for (final mAppUsed in MAppUsed.mAppUsed) {
-          //     if (mAppUsed.id == '2') {
-          //       MostUsedApps(
-          //         mAppUsed: mAppUsed,
-          //       );
-          //     }
-          //   }
-          // }
+          dropdownValue = value;
         });
+        widget.onMenuChanged.call(value.id);
       },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
+      items: list.map<DropdownMenuItem<DarMenuItem>>((value) {
+        return DropdownMenuItem<DarMenuItem>(
           value: value,
-          child: Text(value, style: GoogleFonts.markaziText()),
+          child: Text(value.name, style: GoogleFonts.markaziText()),
         );
       }).toList(),
     );

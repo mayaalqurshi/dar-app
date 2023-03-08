@@ -1,7 +1,7 @@
+import 'package:dar/components/dar_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../components/dar_button.dart';
 import '../components/dar_drawer.dart';
 import '../components/dar_drop_button.dart';
 import '../components/dar_most_used_apps.dart';
@@ -107,15 +107,6 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: const Color(0xFF959595),
-      //   child: const Icon(
-      //     Icons.headset_mic,
-      //     color: Colors.black,
-      //   ),
-      // ),
-      // Drawer
       endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );

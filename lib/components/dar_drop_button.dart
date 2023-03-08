@@ -21,7 +21,7 @@ class _DarDropdownButtonState extends State<DarDropdownButton> {
       icon: const Icon(Icons.keyboard_arrow_down, size: 20),
       value: dropdownValue,
       elevation: 16,
-      style: const TextStyle(color: Color(0xFF162f11), fontSize: 20),
+      style: const TextStyle(color: Color(0xFF162f11), fontSize: 26),
       underline: Container(
         height: 1,
         color: const Color(0xFF162f11),

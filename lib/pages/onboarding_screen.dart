@@ -23,8 +23,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   int _currentPage = 0;
   List colors = const [
-    Color(0xfffbf9f2),
     Color(0xffaab9a9),
+    Color(0xffD5D5D5),
     Color(0xfffbf9f2),
   ];
 

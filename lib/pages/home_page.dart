@@ -30,7 +30,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Color(0xfffbf9f2),
+        ),
+      ),
       body: ListView(
         children: [
           Center(
@@ -67,13 +72,16 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 12,
                 ),
-                Row(
-                  children: [
-                    for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
-                      MostUsedApps(
-                        mAppUsed: mAppUsed,
-                      ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 12, top: 10),
+                  child: Row(
+                    children: [
+                      for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
+                        MostUsedApps(
+                          mAppUsed: mAppUsed,
+                        ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 12,

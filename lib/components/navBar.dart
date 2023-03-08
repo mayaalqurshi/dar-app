@@ -12,22 +12,22 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  var currentIndex = 0;
+  var currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     final pages = [
-      const HomePage(),
-      const AllSectionsPage(),
       const OtherServicesPage(),
+      const AllSectionsPage(),
+      const HomePage(),
     ];
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: FlashyTabBar(
         items: [
           FlashyTabBarItem(
-            icon: const Icon(Icons.home, color: Color(0xffaab9a9)),
+            icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
             title: const Text(
-              'الصفحة الرئيسية',
+              'خدمات اخرى',
               style: TextStyle(color: Color(0xffaab9a9)),
             ),
           ),
@@ -39,9 +39,9 @@ class _NavBarState extends State<NavBar> {
             ),
           ),
           FlashyTabBarItem(
-            icon: const Icon(Icons.library_books, color: Color(0xffaab9a9)),
+            icon: const Icon(Icons.home, color: Color(0xffaab9a9)),
             title: const Text(
-              'خدمات اخرى',
+              'الصفحة الرئيسية',
               style: TextStyle(color: Color(0xffaab9a9)),
             ),
           ),

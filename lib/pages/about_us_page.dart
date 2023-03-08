@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../components/dar_drawer.dart';
 import '../components/developer_card.dart';
 import '../components/title1.dart';
 
-class AboutUsPages extends StatelessWidget {
+class AboutUsPages extends StatefulWidget {
   const AboutUsPages({super.key});
 
+  @override
+  State<AboutUsPages> createState() => _AboutUsPagesState();
+}
+
+class _AboutUsPagesState extends State<AboutUsPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +29,7 @@ class AboutUsPages extends StatelessWidget {
             const SizedBox(height: 20),
             const Title1('عن التطبيق'),
             const SizedBox(height: 10),
+            Image.asset('assets/img/Logo.jpg'),
             const Title1(
                 ' التطبيق يسهل للشخص البحث عن اكثر التطبيقات استخداماً في المنطقة وماهي الفعاليات الموجودة وبإمكانه التواصل مع اهل المنطقة او مترجمين لتقديم المساعدة'),
             const SizedBox(height: 20),

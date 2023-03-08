@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../components/app_card.dart';
 import '../../components/dar_drawer.dart';
+import '../../model/section_model.dart';
 
-class SectionPage extends StatelessWidget {
-  const SectionPage({super.key});
+class SectionPage extends StatefulWidget {
+  const SectionPage({
+    super.key,
+    required this.catId,
+  });
+  final Category catId;
 
+  @override
+  State<SectionPage> createState() => _SectionPageState();
+}
+
+class _SectionPageState extends State<SectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,33 +25,34 @@ class SectionPage extends StatelessWidget {
           width: 160,
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 12,
+      body: ListView(
+        children: [
+          Center(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 12,
+                ),
+                // Text(
+                //   'تطبيقات التوصيل',
+                //   style: GoogleFonts.markaziText(fontSize: 20),
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
+                for (final section in Section.sections) ...[
+                  if (section.cat_id == widget.catId.id)
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: AppCard(
+                        sectionInfo: section,
+                      ),
+                    ),
+                ],
+              ],
             ),
-            Text(
-              'تطبيقات التوصيل',
-              style: GoogleFonts.markaziText(fontSize: 20),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const AppCard(),
-            const SizedBox(
-              height: 20,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const AppCard(),
-            const SizedBox(
-              height: 20,
-            ),
-            const AppCard(),
-          ],
-        ),
+          ),
+        ],
       ),
       // Drawer
       endDrawer: const DarDrawer(),

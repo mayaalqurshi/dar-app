@@ -1,4 +1,3 @@
-import 'package:dar/components/dar_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,21 +18,25 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset(
-          'assets/img/darlogo.jpg',
-          width: 160,
-        ),
-      ),
+          // title: Image.asset(
+          //   'assets/img/darlogo.jpg',
+          //   width: 160,
+          // ),
+          ),
       body: ListView(
         children: [
           Center(
             child: Column(
               children: [
+                Image.asset(
+                  'assets/img/Logo.jpg',
+                  height: 180,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const DarDropdownButton(),
-                    Text(':اختر المدينة ', style: GoogleFonts.markaziText(fontSize: 18))
+                    Text(':اختر المدينة ', style: GoogleFonts.markaziText(fontSize: 26))
                   ],
                 ),
                 const SizedBox(
@@ -45,7 +48,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   'التطبيقات الأكثر استخدماً',
-                  style: GoogleFonts.markaziText(fontSize: 20),
+                  style: GoogleFonts.markaziText(fontSize: 26),
                 ),
                 const SizedBox(
                   height: 12,
@@ -58,34 +61,34 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 12,
                 ),
-                Text(
-                  'الأقسام',
-                  style: GoogleFonts.markaziText(fontSize: 20),
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                DarButton(
-                  textButton: 'تطبيقات التوصيل',
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                DarButton(
-                  textButton: 'الفعاليات',
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                DarButton(
-                  textButton: 'تطبيقات المواصلات',
-                  onTap: () {},
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
+                // Text(
+                //   'الأقسام',
+                //   style: GoogleFonts.markaziText(fontSize: 20),
+                // ),
+                // const SizedBox(
+                //   height: 12,
+                // ),
+                // DarButton(
+                //   textButton: 'تطبيقات التوصيل',
+                //   onTap: () {},
+                // ),
+                // const SizedBox(
+                //   height: 12,
+                // ),
+                // DarButton(
+                //   textButton: 'الفعاليات',
+                //   onTap: () {},
+                // ),
+                // const SizedBox(
+                //   height: 12,
+                // ),
+                // DarButton(
+                //   textButton: 'تطبيقات المواصلات',
+                //   onTap: () {},
+                // ),
+                // const SizedBox(
+                //   height: 12,
+                // ),
                 TextButton(
                   onPressed: () {
                     Navigator.push(
@@ -107,6 +110,15 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {},
+      //   backgroundColor: const Color(0xFF959595),
+      //   child: const Icon(
+      //     Icons.headset_mic,
+      //     color: Colors.black,
+      //   ),
+      // ),
+      // Drawer
       endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );

@@ -27,7 +27,7 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: Text('الصفحة الرئيسية', style: GoogleFonts.markaziText(fontSize: 22)),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const HomePage(),
@@ -38,7 +38,7 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: Text('خدمات اخرى', style: GoogleFonts.markaziText(fontSize: 22)),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const OtherServicesPage(),
@@ -49,7 +49,7 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: Text('اعدادات', style: GoogleFonts.markaziText(fontSize: 22)),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const SettingPage(),
@@ -60,7 +60,7 @@ class DarDrawer extends StatelessWidget {
           ListTile(
             trailing: Text('نبذة عنا', style: GoogleFonts.markaziText(fontSize: 22)),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const AboutUsPages(),

@@ -98,15 +98,6 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   backgroundColor: const Color(0xFF959595),
-      //   child: const Icon(
-      //     Icons.headset_mic,
-      //     color: Colors.black,
-      //   ),
-      // ),
-      // Drawer
       endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );

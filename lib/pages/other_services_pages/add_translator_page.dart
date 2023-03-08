@@ -1,5 +1,6 @@
 import 'package:dar/components/add_translator_page/add_translator_card.dart';
 import 'package:dar/components/dar_drawer.dart';
+import 'package:dar/components/dar_main_title.dart';
 import 'package:flutter/material.dart';
 
 class AddTranslator extends StatefulWidget {
@@ -17,7 +18,14 @@ class _AddTranslatorState extends State<AddTranslator> {
       endDrawer: const DarDrawer(),
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: const [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: DarMainTitle(
+                MainTitle: 'اضافة مترجم',
+              ),
+            ),
             SizedBox(
               height: 40,
             ),

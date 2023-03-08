@@ -13,6 +13,10 @@ class OtherServicesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Color(0xfffbf9f2),
+        ),
         title: Image.asset(
           'assets/img/darlogo.jpg',
           width: 160,

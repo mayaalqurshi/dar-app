@@ -13,8 +13,8 @@ class MostUsedApps extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Container(
-        height: 100,
-        width: 100,
+        height: 80,
+        width: 80,
         decoration: BoxDecoration(
           color: const Color(0xFFD9D9D9),
           borderRadius: BorderRadius.circular(20),

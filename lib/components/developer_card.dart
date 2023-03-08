@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class DeveloperCard extends StatelessWidget {
+class DeveloperCard extends StatefulWidget {
   const DeveloperCard({
     super.key,
     required this.textName,
   });
   final String textName;
-  // final String linkedIn;
 
+  @override
+  State<DeveloperCard> createState() => _DeveloperCardState();
+}
+
+class _DeveloperCardState extends State<DeveloperCard> {
+  // final String linkedIn;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +29,7 @@ class DeveloperCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
-            textName,
+            widget.textName,
             style: GoogleFonts.markaziText(fontSize: 20, color: const Color(0xFF162f11)),
           ),
           const SizedBox(

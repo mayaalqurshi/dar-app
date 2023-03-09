@@ -23,7 +23,7 @@ class Category {
     Category(
       id: '2',
       image: 'https://cdn-icons-png.flaticon.com/512/6931/6931196.png',
-      name: 'تطبيقات المواصلات ',
+      name: 'تطبيقات المواصلات',
     ),
     Category(
       id: '3',

@@ -54,7 +54,7 @@ class _SectionCardState extends State<SectionCard> {
               ),
               Text(
                 widget.categories.name,
-                style: GoogleFonts.markaziText(fontSize: 24),
+                style: GoogleFonts.markaziText(fontSize: 20),
               ),
             ],
           ),

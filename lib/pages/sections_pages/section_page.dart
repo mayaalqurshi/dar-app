@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../components/app_card.dart';
-import '../../components/dar_drawer.dart';
 import '../../model/section_model.dart';
 
 class SectionPage extends StatefulWidget {
@@ -54,8 +53,6 @@ class _SectionPageState extends State<SectionPage> {
           ),
         ],
       ),
-      // Drawer
-      endDrawer: const DarDrawer(),
       backgroundColor: const Color(0xfffbf9f2),
     );
   }

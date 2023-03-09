@@ -117,7 +117,7 @@ class _AddLocalCardState extends State<AddLocalCard> {
           ),
         ),
         const SizedBox(
-          height: 40,
+          height: 20,
         ),
         SizedBox(
           width: 360,

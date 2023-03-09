@@ -22,7 +22,6 @@ class OtherServicesPage extends StatelessWidget {
           width: 160,
         ),
       ),
-      endDrawer: const DarDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(

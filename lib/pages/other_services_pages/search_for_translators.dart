@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dar/components/dar_drawer.dart';
 import 'package:dar/components/dar_floating_button.dart';
 import 'package:dar/components/dar_main_title.dart';
 import 'package:dar/components/translators_page/translator_card.dart';
@@ -38,7 +37,6 @@ class _SearchForTranslatorsState extends State<SearchForTranslators> {
     log('Count: ${transInfo.length}');
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: const DarDrawer(),
       body: ListView(
         physics: const NeverScrollableScrollPhysics(),
         children: [

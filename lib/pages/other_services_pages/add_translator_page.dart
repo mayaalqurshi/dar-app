@@ -1,5 +1,4 @@
 import 'package:dar/components/add_translator_page/add_translator_card.dart';
-import 'package:dar/components/dar_drawer.dart';
 import 'package:dar/components/dar_main_title.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +14,8 @@ class _AddTranslatorState extends State<AddTranslator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      endDrawer: const DarDrawer(),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+        child: ListView(
           children: const [
             Padding(
               padding: EdgeInsets.all(8.0),
@@ -27,7 +24,7 @@ class _AddTranslatorState extends State<AddTranslator> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             AddTranslatorCard(),
           ],

@@ -1,5 +1,4 @@
 import 'package:dar/components/add_local_page/add_local_card.dart';
-import 'package:dar/components/dar_drawer.dart';
 import 'package:dar/components/dar_main_title.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +15,7 @@ class _AddCitizensState extends State<AddCitizens> {
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: const [
             Padding(
               padding: EdgeInsets.all(8.0),
@@ -25,7 +24,7 @@ class _AddCitizensState extends State<AddCitizens> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             AddLocalCard(),
           ],

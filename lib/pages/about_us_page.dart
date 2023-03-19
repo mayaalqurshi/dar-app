@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../components/developer_card.dart';
 import '../components/title1.dart';
@@ -11,10 +12,21 @@ class AboutUsPages extends StatefulWidget {
 }
 
 class _AboutUsPagesState extends State<AboutUsPages> {
+  var _url = Uri.parse('');
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          color: Color(0xfffbf9f2),
+        ),
         title: Image.asset(
           'assets/img/darlogo.jpg',
           width: 160,
@@ -28,7 +40,10 @@ class _AboutUsPagesState extends State<AboutUsPages> {
                 const SizedBox(height: 20),
                 const Title1('عن التطبيق'),
                 const SizedBox(height: 10),
-                Image.asset('assets/img/Logo.jpg'),
+                Image.asset(
+                  'assets/img/Logo.jpg',
+                  height: 160,
+                ),
                 const Title1(
                     ' التطبيق يسهل للشخص البحث عن اكثر التطبيقات استخداماً في المنطقة وماهي الفعاليات الموجودة وبإمكانه التواصل مع اهل المنطقة او مترجمين لتقديم المساعدة'),
                 const SizedBox(height: 20),
@@ -37,20 +52,35 @@ class _AboutUsPagesState extends State<AboutUsPages> {
                   padding: const EdgeInsets.only(right: 10.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      SizedBox(height: 20),
-                      SizedBox(height: 20),
+                    children: [
+                      const SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       DeveloperCard(
                         textName: 'مايا القرشي',
-                        // linkedIn: 'https://www.linkedin.com/in/maya-alqurshi-540122158',
+                        link: () {
+                          _url = Uri.parse(
+                            'https://www.linkedin.com/in/maya-alqurshi-540122158',
+                          );
+                          _launchUrl();
+                        },
                       ),
                       DeveloperCard(
                         textName: 'رهف القحطاني',
-                        // linkedIn: 'https://www.linkedin.com/in/rahaf-alqahtani-405bb1216',
+                        link: () {
+                          _url = Uri.parse(
+                            'https://www.linkedin.com/in/rahaf-alqahtani-405bb1216',
+                          );
+                          _launchUrl();
+                        },
                       ),
                       DeveloperCard(
                         textName: 'شهد السبيعي',
-                        // linkedIn: 'https://www.linkedin.com/in/shahad-alsubaie-cs/',
+                        link: () {
+                          _url = Uri.parse(
+                            'https://www.linkedin.com/in/shahad-alsubaie-cs/',
+                          );
+                          _launchUrl();
+                        },
                       ),
                     ],
                   ),

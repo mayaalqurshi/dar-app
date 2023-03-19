@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../components/dar_drop_button.dart';
 import '../components/dar_most_used_apps.dart';
-import '../components/dar_search_card.dart';
+import '../components/explore_card.dart';
 import '../model/mAppUsed.dart';
 
 List<DarMenuItem> list = [
@@ -35,61 +35,89 @@ class _HomePageState extends State<HomePage> {
           color: Color(0xfffbf9f2),
         ),
       ),
-      body: ListView(
+      body: Stack(
         children: [
-          Center(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/img/Logo.jpg',
-                  height: 180,
+          Positioned(
+            bottom: 0,
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0xffC3C1BE),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              ),
+              // mmmmmmm
+              width: 380,
+              height: 440,
+            ),
+          ),
+          ListView(
+            children: [
+              Center(
+                child: Column(
                   children: [
-                    DarDropdownButton(
-                      onMenuChanged: (newValue) {
-                        setState(() {
-                          cityId = newValue;
-                        });
-                      },
+                    Image.asset(
+                      'assets/img/Logo.jpg',
+                      height: 160,
                     ),
-                    Text(':اختر المدينة ', style: GoogleFonts.markaziText(fontSize: 26))
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        DarDropdownButton(
+                          onMenuChanged: (newValue) {
+                            setState(() {
+                              cityId = newValue;
+                            });
+                          },
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          ':اختر المدينة ',
+                          style: GoogleFonts.markaziText(fontSize: 26),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const ExploreCard(),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Text(
+                      'التطبيقات الأكثر استخدماً',
+                      style: GoogleFonts.markaziText(fontSize: 26),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12, top: 10),
+                      child: Row(
+                        children: [
+                          for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
+                            MostUsedApps(
+                              mAppUsed: mAppUsed,
+                            ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                   ],
                 ),
-                const SizedBox(
-                  height: 12,
-                ),
-                const DarSearchCard(),
-                const SizedBox(
-                  height: 12,
-                ),
-                Text(
-                  'التطبيقات الأكثر استخدماً',
-                  style: GoogleFonts.markaziText(fontSize: 26),
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, top: 10),
-                  child: Row(
-                    children: [
-                      for (final mAppUsed in MAppUsed.mAppUsed.where((element) => element.cityId == cityId))
-                        MostUsedApps(
-                          mAppUsed: mAppUsed,
-                        ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
